@@ -387,6 +387,8 @@ try:
 except Exception as ex:
     print(f'{ex}  - it occured but code wont stope.')
 
+open('challenge.txt', 'w').writelines('Find the connection of words and conviction of words that appear in the images to surah names.\n'
+                                      'Can you derive insights from that? \nHint: Check https://www.kaggle.com/hammaadali/quran-word-cloud/notebook ')
 
 
 
