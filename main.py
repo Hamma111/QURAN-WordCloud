@@ -45,7 +45,7 @@ if not exists('english'):
 #########################################
 
 # Load quran in english
-df = read_csv('en.yusufali.csv')
+df = read_csv('utils/en.yusufali.csv')
 eng_corpus = []
 for num in range(1,115):
     full_surah = ""
@@ -54,7 +54,7 @@ for num in range(1,115):
     eng_corpus.append(full_surah)
 
 # Load quran in arabic
-dff = read_csv('Quran-clean-without-aarab.csv', index_col=None)
+dff = read_csv('utils/Quran-clean-without-aarab.csv', index_col=None)
 arabic_corpus = []
 for num in range(1,115):
     full_surah = ""
@@ -281,7 +281,7 @@ def generateWordCloud(surah=None, corpus=None, title=None, isArabic=False):
             fileName = f'english/{surah+1}-{surah_name[surah]}.png'
 
     if isArabic:
-        wc = WordCloud(font_path='arial.ttf', #relative_scaling=1,
+        wc = WordCloud(font_path='utils/arial.ttf', #relative_scaling=1,
                        stopwords=ASW, max_words=80, width=800, height=400,
                        background_color='black')
         if surah is None:
