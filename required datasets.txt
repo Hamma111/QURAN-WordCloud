@@ -1,0 +1,37 @@
+=================================================================================================================
+=================================================================================================================
+
+Assalamu alaikum,
+
+Three files are pre-requisite for this code: English quran dataset file, Arabic quran dataset file and the Arial 
+font file to display stuff in arabic.
+
+
+You can download the files from this github repo: https://github.com/Hamma111/QURAN-WordCloud/tree/master/utils
+
+Or
+
+You can download the files from following sites:
+
+1) English quran dataset. Name of file is en.yusufali.csv 
+https://www.kaggle.com/zusmani/the-holy-quran?select=en.yusufali.csv
+
+
+2) Arabic quran dataset. Name of file is Quran-clean-without-aarab.csv
+https://www.kaggle.com/hammaadali/quran-clean-without-araab?select=Quran-clean-without-aarab.csv
+
+
+3) Arial font file. Name of file is arial.ttf
+https://www.kaggle.com/hammaadali/arial-font?select=arial.ttf
+
+
+
+
+Make sure to place these files in current working directory of the code or notebook. Or make the appropriate
+changes in code.
+
+
+Hit me up for any queries or improvements. Thanks.
+
+
+Wassalam.
