@@ -1,43 +1,15 @@
 # coding=utf8
+# DO NOT remove the above comment
 
-##################################################
-#####  ACQUIRING AND DOWNLOADING NECESSARY     ###
-#####       LIBRARIES AND DATA                 ###
-##################################################
-from os import mkdir, system, getcwd
-from os.path import exists
 
-ls = ['pandas', 'matplotlib', 'arabic_reshaper', 'python-bidi', 'wordcloud', 'requests']
 
-sites = ['https://storage.googleapis.com/kagglesdsdata/datasets/4185/7517/en.yusufali.csv?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com%2F20200922%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20200922T042355Z&X-Goog-Expires=259199&X-Goog-SignedHeaders=host&X-Goog-Signature=6e3c7a792725c2e123ce17c25b35f1e97afa60e8e3fd952f371dd87fde7c6d48806db2289a1af1e3968317b8d3b7e8337268a760ddd16ff661764240ccdf2c61662789404f14664009b1fb91805c0c6d0aa0450f05e0ee1c55219fdce6a72f9f29b21a852bf4f1b761be9ea19342a68e5d7da7c00ce43263d5a6734ec31c9bd276f2a12d0e4e5227fd0b3d7e9c80df453d29c14f0c9b7a631ae330f098bcb3127637193fcb883128dc373c801ebb0026d331b312d99b6f7edaff026e762298b5e7b3bc047cdd027f158fe6e67bbb9c3b23ba0fd2229d7031cd2c23e88ae8ffb18ef18f7dabeb5eef380dc2d26a625ab37aa9287116f606bceb893428536d1471',
-         'https://storage.googleapis.com/kagglesdsdata/datasets/875110/1490687/Quran-clean-without-aarab.csv?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com%2F20200922%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20200922T043132Z&X-Goog-Expires=259199&X-Goog-SignedHeaders=host&X-Goog-Signature=3423be274b9c587b0745ff0c8d847b0c16ca7f211bc08c6d982970061ff434269e11e51301d960f5e0a3ecc48a879acb2d244047124161535d581dad0569c04ecf47c835ccf54aeee50f3fa3712b9321f2eeb7d6fb743e01b70e64a9cb668203e25eeeb7628434365b455f87a4056af3ad470682c79ec3c982fc5faa33e7dd15a957d0c0ff53ee9de46834851fb93e6c3dab79dc7ea3af7b0c68d6102b3ac44adb0e29c1ba15c9fcc6c6c7d285f0f94199727a2af817067904ddae8bbb40d1a95132448117541940277d27c3f37324be3ec8245b9c11fcf10f8308dd3f04ecc19e40ce8b87edcaf027eadd3d40359c2168689d0e1fb0d20810b036d172bf56fe',
-          'https://storage.googleapis.com/kagglesdsdata/datasets/852355/1453967/arial.ttf?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com%2F20200922%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20200922T043521Z&X-Goog-Expires=259199&X-Goog-SignedHeaders=host&X-Goog-Signature=5c4c1a67d4f72ec0318e63fcb0a3c2453aeb352d59087e4d05ae28cca5d69e73e7446670b111cd8edde1ef76f3ef668cc3b25bfc2bd4907dc435a2907153bcac315443e91ab75ecda8e37753ad63afc463f1d4d353dd6f3821d4f3b6176832d0fec29857c3f5e0fd752b08baf65f2703c214006b91fac1c8ff48c9bedcb9d12f39534efeb857a6813a8b1a3f618e799e757a179ee069948cf47c89ba01e506226e5b71eba9dabd78c22f258300d7bb9a29c4fa7708235a4bb75e5fcf8592ad58fcdb5e23290fcbe4c865a2137ef57b8058e56a779a9a7b072f0a00fb837ae546b968261eea72786c3d7a46f5fc8abc2259e19c2427c760ab98817f75e3ecd5f0'
-        ]
-
-end = len(ls) + len(sites)
-for i in range(end):
-    progress = '=='*i + '=>' + '..'*(end-i-1)
-    print(f'Downloading dependencies [{progress}] {i+1}/{end}\n\n')
-    if i < len(ls):
-        try:
-            system(f'python -m pip install {ls[i]}')
-        except:
-            pass
-        _ = system('cls')
-        
-    else:
-        from requests import get
-        st = sites[end-i-1]
-        fname = st[st.rfind('/')+1:st.find('?X')]
-        if exists(fname):
-            continue
-        else:
-            open(fname, 'wb').write(get(st).content)
-        _ = system('cls')
-
-print('Dependencies installed. ')
-_ = system('cls')
-print('Loading and preparing data')
+#### Following libraries are required for the code to work:
+# pandas
+# matplotlib
+# arabic_reshaper
+# python-bidi
+# wordcloud
+## You can install these libraries by using the pip command in cmd. For example, pip install pandas.
 
 
 
@@ -52,6 +24,8 @@ from wordcloud import WordCloud, STOPWORDS
 from matplotlib.pyplot import figure, axis, imshow, savefig, style
 from matplotlib.pyplot import title as Title
 from time import sleep
+from os.path import exists
+from os import mkdir, system, getcwd
 
 
 ###################################
