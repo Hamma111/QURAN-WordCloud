@@ -4,9 +4,9 @@
 This repository will introduce an interesting method to analyze a surah or portion of quran.
 As you know WordCloud comprises of most frequent words. More frequent the word is, bigger will its size be.
 
-![](https://github.com/Hamma111/QURAN-WordCloud/blob/master/arabic/1-Al-Baqarah.png)
+![](https://github.com/Hamma111/QURAN-WordCloud/blob/master/arabic/2-Al-Baqarah.png)
 
-![](https://github.com/Hamma111/QURAN-WordCloud/blob/master/misc/Meccan(Makki)%20Surahs%20English.png)
+![](https://github.com/Hamma111/QURAN-WordCloud/blob/master/misc%20WCs/Meccan(Makki)%20Surahs%20English.png)
 
 
 
