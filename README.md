@@ -1,6 +1,8 @@
 # QURAN-WordCloud
 # Aesthetic wordclouds of Holy Quran in Arabic and English Language
 
+Visit [Kaggle Link]([url](https://www.kaggle.com/code/hammaadali/quran-word-cloud)) for full article.
+
 This repository will introduce an interesting method to analyze a surah or portion of quran.
 As you know WordCloud comprises of most frequent words. More frequent the word is, bigger will its size be.
 
